@@ -27,17 +27,17 @@ export default function CommentItem({comment, handleLike, handleDislike, addRepl
             
 
             <button 
-                class="btn btn-success btn-sm"
+                className="btn btn-success btn-sm"
                 onClick={() => handleLike(comment.id)}
             > 👍 {comment.likes}</button>
             <button 
-                class="btn btn-danger btn-sm"
-                onClick=""
-            > 👎 </button>
+                className="btn btn-danger btn-sm"
+                onClick={() => handleDislike(comment.id)}
+            > 👎  {comment.dislikes} </button>
             {
                 canReply && (
                     <button 
-                        class="btn btn-dark btn-sm" 
+                        className="btn btn-dark btn-sm" 
                         onClick={() => { 
                             if (!replyText.trim()) {   
                                 alert("Reply cannot be empty!");
@@ -56,6 +56,7 @@ export default function CommentItem({comment, handleLike, handleDislike, addRepl
                 key={reply.id} 
                 comment={reply} 
                 handleLike={handleLike} 
+                handleDislike={handleDislike} 
                 addReply={addReply}
                 depth={depth + 1}
             />

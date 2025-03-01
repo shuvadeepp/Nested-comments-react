@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentItem from "./CommentItem"; 
-
+ 
 const API_URL = "http://localhost:5000/comments";
 
 export default function CommentSection() {
@@ -42,6 +42,16 @@ export default function CommentSection() {
         targetLike.likes += 1;
     
         await axios.patch(`${API_URL}/${parentLikes.id}`, parentLikes); 
+        fetchComments();
+    }
+
+    const handleDislike = async (id) => {
+        // alert("dislike in-progress");
+        const parentDisLikes = comments.find((c) => findReplyById(c, id));
+        const targetDisLike = findReplyById(parentDisLikes, id);
+        targetDisLike.dislikes += 1;
+    
+        await axios.patch(`${API_URL}/${parentDisLikes.id}`, parentDisLikes); 
         fetchComments();
     }
 
@@ -89,14 +99,14 @@ export default function CommentSection() {
             > 
             Comment 
             </button>
-            </div>
-            {/* <CommentItem key={comment.id} comment={} handleLike={handleLike} handleDilike={} addReply={}/> */}
+            </div> 
             {
                 comments.map((comment)=>( 
                     <CommentItem 
                         key={comment.id} 
                         comment={comment} 
                         handleLike={handleLike} 
+                        handleDislike={handleDislike} 
                         addReply={addReply} 
                     />
                 ))

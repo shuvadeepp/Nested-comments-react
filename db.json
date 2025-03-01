@@ -10,19 +10,65 @@
           "id": 1740803482199,
           "text": "good",
           "likes": 0,
-          "dislikes": 0,
+          "dislikes": 1,
           "replies": [
             {
               "id": 1740803492952,
               "text": "you buy a car",
-              "likes": 1,
-              "dislikes": 0,
+              "likes": 4,
+              "dislikes": 1,
               "replies": [
                 {
                   "id": 1740803498128,
                   "text": "yes",
                   "likes": 3,
                   "dislikes": 0,
+                  "replies": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1740807270069",
+      "text": "Woow new iphone ",
+      "likes": 1,
+      "dislikes": 0,
+      "replies": [
+        {
+          "id": 1740807287503,
+          "text": "khoooooooooooool party!!!",
+          "likes": 1,
+          "dislikes": 0,
+          "replies": [
+            {
+              "id": 1740807352967,
+              "text": "ok",
+              "likes": 0,
+              "dislikes": 0,
+              "replies": []
+            }
+          ]
+        },
+        {
+          "id": 1740807335135,
+          "text": "lets take selfie ",
+          "likes": 0,
+          "dislikes": 0,
+          "replies": [
+            {
+              "id": 1740807347225,
+              "text": "ok come to the park",
+              "likes": 0,
+              "dislikes": 5,
+              "replies": [
+                {
+                  "id": 1740811519148,
+                  "text": "no come to the mall",
+                  "likes": 4,
+                  "dislikes": 2,
                   "replies": []
                 }
               ]
