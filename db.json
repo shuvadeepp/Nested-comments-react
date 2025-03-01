@@ -1,0 +1,35 @@
+{
+  "comments": [
+    {
+      "id": "1740803475774",
+      "text": "nice",
+      "likes": 1,
+      "dislikes": 0,
+      "replies": [
+        {
+          "id": 1740803482199,
+          "text": "good",
+          "likes": 0,
+          "dislikes": 0,
+          "replies": [
+            {
+              "id": 1740803492952,
+              "text": "you buy a car",
+              "likes": 1,
+              "dislikes": 0,
+              "replies": [
+                {
+                  "id": 1740803498128,
+                  "text": "yes",
+                  "likes": 3,
+                  "dislikes": 0,
+                  "replies": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
