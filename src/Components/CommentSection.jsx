@@ -60,7 +60,13 @@ export default function CommentSection() {
         
         const parentReply = findReplyById(parentComment, parentId);
         
-        const newReply = { id: Date.now(), text: replyText, likes: 0, dislikes: 0, replies: [] };
+        const newReply = { 
+            id: Date.now(), 
+            text: replyText, 
+            likes: 0, 
+            dislikes: 0, 
+            replies: [] 
+        };
         parentReply.replies.push(newReply);
         // console.log(parentReply); return false;
         await axios.patch(`${API_URL}/${parentComment.id}`, { replies: parentComment.replies }); 
